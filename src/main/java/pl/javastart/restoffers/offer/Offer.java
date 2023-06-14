@@ -1,4 +1,6 @@
-package pl.javastart.restoffers;
+package pl.javastart.restoffers.offer;
+
+import pl.javastart.restoffers.category.Category;
 
 import javax.persistence.*;
 

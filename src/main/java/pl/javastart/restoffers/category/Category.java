@@ -1,7 +1,7 @@
-package pl.javastart.restoffers;
+package pl.javastart.restoffers.category;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import pl.javastart.restoffers.offer.Offer;
 import javax.persistence.*;
 import java.util.Set;
 
@@ -19,6 +19,19 @@ public class Category {
     private Set<Offer> offers;
 
     public Category() {
+    }
+
+    public Category(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public int getOffersSize() {
+        if (offers == null) {
+            return 0;
+        } else {
+            return offers.size();
+        }
     }
 
     public Long getId() {
